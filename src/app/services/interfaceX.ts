@@ -1,4 +1,4 @@
-// Define the interface for the data structure
+// Defination interface for the data structure
 
 export interface ICovidData {
     theme: string;

@@ -1,11 +1,10 @@
-// Page.tsx
 'use client';
 
 import React, { useState, useEffect } from 'react';
 import { Button, Spin, Alert } from 'antd';
-import ChartCard from './components/WholeChartsCard'; // Import the updated ChartCard
+import ChartCard from './components/ContentArea'; 
 import { ICovidData } from './services/interfaceX';
-import { fetchCovidData } from './services/api'; // Adjust path as needed
+import { fetchCovidData, generateCovidDataPDF } from './services/api'; 
 import { FaFilePdf, FaStickyNote, FaFilter } from 'react-icons/fa';
 
 const PageHeader: React.FC<{ title: string }> = ({ title }) => (
@@ -14,12 +13,15 @@ const PageHeader: React.FC<{ title: string }> = ({ title }) => (
   </header>
 );
 
-
-const Panel: React.FC = () => (
+const Panel: React.FC<{ onExportPDF: () => void }> = ({ onExportPDF }) => (
   <div style={{ padding: '20px', display: 'flex', justifyContent: 'space-between', backgroundColor: 'pink' }}>
     <h2>Page Title | Data Seperator</h2>
     <div>
-      <Button style={{ marginRight: '8px' }} icon={<FaFilePdf />}>
+      <Button
+        style={{ marginRight: '8px' }}
+        icon={<FaFilePdf />}
+        onClick={onExportPDF} // Trigger 
+      >
         Export to PDF
       </Button>
       <Button style={{ marginRight: '8px' }} icon={<FaStickyNote />}>
@@ -54,10 +56,26 @@ const Page: React.FC = () => {
     loadData();
   }, []);
 
+
+  const handleExportPDF = async () => {
+    try {  
+      const pdfBytes = await generateCovidDataPDF(data);
+
+      // Create a Blob and trigger a download
+      const blob = new Blob([pdfBytes], { type: 'application/pdf' });
+      const link = document.createElement('a');
+      link.href = URL.createObjectURL(blob);
+      link.download = 'covid19_report.pdf';
+      link.click();
+    } catch (error) {
+      console.error('Error generating PDF:', error);
+    }
+  };
+
   return (
     <div>
       <PageHeader title="Page Title | Mavin Project" />
-      <Panel />
+      <Panel onExportPDF={handleExportPDF} />
       <div style={{ padding: '20px', display: 'flex', flexDirection: 'column' }}>
         {loading && <Spin size="large" />}
         {error && <Alert message={error} type="error" />}

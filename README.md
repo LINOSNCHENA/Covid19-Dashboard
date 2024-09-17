@@ -1,37 +1,48 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# COVID APPLICATION FOR ENGLAND - Task
 
-## Getting Started
+## 1. Start Enviroment
 
-First, run the development server:
+```
+npx create-next-app@latest
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 2. Created Application
 
-## Learn More
+```
+npx create-next-app@latest my-next-app
+cd my-next-app
+npm install --save-dev typescript @types/react @types/node
 
-To learn more about Next.js, take a look at the following resources:
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 3. Created Dashboard Dependances
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```
+npm install antd
+npm install @antv/g2plot
+npm install react-icons
+npm install @trpc/server @trpc/client @trpc/react zod  --legacy-peer-deps
 
-## Deploy on Vercel
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Pending Tasks
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
-#
+```
+1.  Filtering mechanism
+2. Notes Creations
+3. Records and counting favourites
+```
+
+## Completed Tasks
+
+```
+1. Display of two charts
+2. Header component
+3. Download Pdf
+
+```
+
+## End

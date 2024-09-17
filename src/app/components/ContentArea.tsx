@@ -9,16 +9,16 @@ import ColumsComponent from './ColumsChart';
 const ChartCard: React.FC<{ chartData: ICovidData[]; title: string }> = ({ chartData, title }) => (
   <Card
     title={title}
-    extra={<Button type="link">❤️</Button>} // Dummy heart icon
+    extra={<Button type="link">❤️</Button>} 
     style={{ width: '100%', marginBottom: '20px' }}
   >
     <div style={{ display: 'flex', justifyContent: 'space-between' }}>
       <div style={{ flex: 1, marginRight: '10px', background: '#EFEBE9' }}>
-        <h3>Bar Chart #1</h3>
+        <h3>Bar Chart #1 {chartData.length}</h3>
         <ColumsComponent data={chartData} />
       </div>
       <div style={{ flex: 1, background: '#EFEBE9' }}>
-        <h3>Pie Chart #2</h3>
+        <h3>Pie Chart #2 {chartData.length}</h3>
         <PieChartComponent data={chartData} />
       </div>
     </div>
