@@ -1,31 +1,31 @@
-## Monze
+# COVID APPLICATION FOR ENGLAND
 
-npx create-next-app@latest c18-dashboard --typescript
-cd c18-dashboard
+## 1. Start Enviroment
 
-npm install antd
-npm install @antv/g2
-npm install @trpc/server @trpc/client @trpc/react zod  --legacy-peer-deps
-
-
-
-
-npx create-next-app@latest my-covid-dashboard --typescript
-cd my-covid-dashboard
-
-npm install antd @ant-design/icons @antv/g2plot @trpc/client @trpc/server @trpc/next react-query
-
-
-
+```
 npx create-next-app@latest
 
+```
 
-## Second
 
+
+## 2. Created Application
+
+```
 npx create-next-app@latest my-next-app
 cd my-next-app
 npm install --save-dev typescript @types/react @types/node
 
+```
 
+## 3. Created Dashboard Dependances
+
+```
+npm install antd
+npm install @antv/g2plot
+npm install react-icons
+npm install @trpc/server @trpc/client @trpc/react zod  --legacy-peer-deps
+
+```
 
 ## End
