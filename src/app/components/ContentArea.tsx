@@ -14,11 +14,11 @@ const ChartCard: React.FC<{ chartData: ICovidData[]; title: string }> = ({ chart
   >
     <div style={{ display: 'flex', justifyContent: 'space-between' }}>
       <div style={{ flex: 1, marginRight: '10px', background: '#EFEBE9' }}>
-        <h3>Bar Chart #1 {chartData.length}</h3>
+        <h3>1. Bar Chart ({chartData.length})</h3>
         <ColumsComponent data={chartData} />
       </div>
       <div style={{ flex: 1, background: '#EFEBE9' }}>
-        <h3>Pie Chart #2 {chartData.length}</h3>
+        <h3>2. Pie Chart ({chartData.length})</h3>
         <PieChartComponent data={chartData} />
       </div>
     </div>

@@ -18,7 +18,7 @@ export const fetchCovidData = async (): Promise<ICovidData[]> => {
 
   const data = await response.json();
   const records = data.results || [];
-  return records.slice(0, 105);
+  return records.slice(0, 25);
 };
 
 // Function to generate PDF 

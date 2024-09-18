@@ -7,8 +7,6 @@ npx create-next-app@latest
 
 ```
 
-
-
 ## 2. Created Application
 
 ```
@@ -31,7 +29,7 @@ npm install @trpc/server @trpc/client @trpc/react zod  --legacy-peer-deps
 ## Pending Tasks
 
 ```
-1.  Filtering mechanism
+1. Filtering mechanism
 2. Notes Creations
 3. Records and counting favourites
 ```

@@ -61,7 +61,6 @@ const Page: React.FC = () => {
     try {  
       const pdfBytes = await generateCovidDataPDF(data);
 
-      // Create a Blob and trigger a download
       const blob = new Blob([pdfBytes], { type: 'application/pdf' });
       const link = document.createElement('a');
       link.href = URL.createObjectURL(blob);
@@ -76,7 +75,7 @@ const Page: React.FC = () => {
     <div>
       <PageHeader title="Page Title | Mavin Project" />
       <Panel onExportPDF={handleExportPDF} />
-      <div style={{ padding: '20px', display: 'flex', flexDirection: 'column' }}>
+      <div style={{ padding: '20px', display: 'flex', flexDirection: 'column'  , background: 'teal'}}>
         {loading && <Spin size="large" />}
         {error && <Alert message={error} type="error" />}
         {!loading && !error && (
