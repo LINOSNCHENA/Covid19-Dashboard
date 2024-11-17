@@ -43,4 +43,13 @@ npm install @trpc/server @trpc/client @trpc/react zod  --legacy-peer-deps
 
 ```
 
+## UX
+
+Below are two screens shots from the landing page \
+
+![ AM#04 ](https://github.com/LINOSNCHENA/COVID19/blob/main/UXViews/1.png)
+![ AM#01 ](https://github.com/LINOSNCHENA/Covid19-Dashboard/blob/main/public/uxViews/1.png)
+![ AM#02 ](https://github.com/LINOSNCHENA/Covid19-Dashboard/blob/main/public/uxViews/1.png)
+
+
 ## End
